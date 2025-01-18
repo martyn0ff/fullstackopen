@@ -5,8 +5,8 @@ function Content(props) {
 
   return (
     <>
-      {[...parts.entries()].map(([part, exercises]) => (
-        <Part part={part} exercises={exercises}/>
+      {parts.map(part => (
+        <Part part={part.name} exercises={part.exercises}/>
       ))}
     </>
   );
