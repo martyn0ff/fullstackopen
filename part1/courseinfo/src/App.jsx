@@ -1,5 +1,6 @@
 import Header from "./Header.jsx";
 import Content from "./Content.jsx";
+import Total from "./Total.jsx";
 
 function App() {
   const course = "Half Stack Application Development";
@@ -19,7 +20,8 @@ function App() {
     <div>
       <Header header={course} />
       <Content parts={map} />
-      <p>Number of exercises {exercises1 + exercises2 + exercises3}</p>
+      <hr/>
+      <Total parts={map} />
     </div>
   );
 }
