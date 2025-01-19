@@ -1,33 +1,12 @@
-import Header from "./Header.jsx";
-import Content from "./Content.jsx";
-import Total from "./Total.jsx";
+import { useState } from "react";
 
 function App() {
-  const course = {
-    name: 'Half Stack application development',
-    parts: [
-      {
-        name: 'Fundamentals of React',
-        exercises: 10
-      },
-      {
-        name: 'Using props to pass data',
-        exercises: 7
-      },
-      {
-        name: 'State of a component',
-        exercises: 14
-      }
-    ]
-  }
+  const [count, setCount] = useState(0);
+
+  setTimeout(() => setCount(count + 1), 1000);
 
   return (
-    <div>
-      <Header header={course.name} />
-      <Content parts={course.parts} />
-      <hr/>
-      <Total parts={course.parts} />
-    </div>
+    <div>{count}</div>
   );
 }
 

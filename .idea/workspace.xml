@@ -5,8 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77c8de0c-4241-40d1-ab5e-5005f8840d40" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/part1/unicafe/src/Feedback.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part1/unicafe/src/FeedbackButton.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part1/unicafe/src/FeedbackControl.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part1/unicafe/src/FeedbackStatistics.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part1/unicafe/src/FeedbackStatisticsContent.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part1/unicafe/src/Header.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part1/courseinfo/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/part1/courseinfo/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part1/courseinfo/src/Content.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/part1/courseinfo/src/Header.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/part1/courseinfo/src/Part.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/part1/courseinfo/src/Total.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/part1/courseinfo/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/part1/courseinfo/src/main.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +34,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2rmC2KtDnbFtWu1KCeuUIoGLnsu" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -37,19 +48,21 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "devel",
-    "last_opened_file_path": "/home/roman/WebstormProjects/fullstackopen/part1/courseinfo/src",
+    "js.last.introduce.type": "CONST",
+    "last_opened_file_path": "/home/roman/WebstormProjects/fullstackopen/part1/unicafe/src",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.JavaScript",
+    "settings.editor.selected.configurable": "preferences.sourceCode.HTML",
     "ts.external.directory.path": "/opt/webstorm/plugins/javascript-plugin/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/part1/unicafe/src" />
       <recent name="$PROJECT_DIR$/part1/courseinfo/src" />
     </key>
   </component>
@@ -68,7 +81,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1737154655131</updated>
-      <workItem from="1737154656848" duration="14298000" />
+      <workItem from="1737154656848" duration="17301000" />
+      <workItem from="1737235188110" duration="6534000" />
     </task>
     <servers />
   </component>
