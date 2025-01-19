@@ -1,5 +1,5 @@
 import Feedback from "./Feedback.jsx";
-import { useState } from "react";
+import StatisticLine from "./StatisticLine.jsx";
 
 const score = {
   positive: 1,
@@ -19,23 +19,23 @@ function FeedbackStatisticsContent({ feedback }) {
   listItems.push(
     <>
       {[...Object.entries(feedback)]
-        .map(([feedbackType, count]) => <li>{feedbackType}: {count}</li>)}
+        .map(([feedbackType, count]) => <StatisticLine text={feedbackType} value={count} />)}
     </>
   );
 
   // Total feedback
   listItems.push(
-    <li>Total: {totalFeedbackSent}</li>
+    <StatisticLine text="total" value={totalFeedbackSent} />
   );
 
   // Average score
   listItems.push(
-    <li>Average: {averageFeedbackScore}</li>
+    <StatisticLine text="average" value={averageFeedbackScore} />
   );
 
   // Positive score percentage
   listItems.push(
-    <li>Positive: {positiveFeedbackPercentage}%</li>
+    <StatisticLine text="positive percentage" value={positiveFeedbackPercentage + "%"} />
   );
 
   function calculateAverageFeedbackScore(feedback) {

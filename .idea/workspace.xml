@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77c8de0c-4241-40d1-ab5e-5005f8840d40" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part1/unicafe/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/part1/unicafe/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part1/unicafe/src/Feedback.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/part1/unicafe/src/Feedback.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part1/unicafe/src/FeedbackControl.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/part1/unicafe/src/FeedbackControl.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part1/unicafe/src/FeedbackStatistics.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/part1/unicafe/src/FeedbackStatistics.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part1/unicafe/src/StatisticLine.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part1/unicafe/src/FeedbackStatisticsContent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/part1/unicafe/src/FeedbackStatisticsContent.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +17,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JSX File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -75,7 +72,7 @@
       <option name="presentableId" value="Default" />
       <updated>1737154655131</updated>
       <workItem from="1737154656848" duration="17301000" />
-      <workItem from="1737235188110" duration="11105000" />
+      <workItem from="1737235188110" duration="11565000" />
     </task>
     <servers />
   </component>
