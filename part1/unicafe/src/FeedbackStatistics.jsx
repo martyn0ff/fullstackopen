@@ -3,15 +3,21 @@ import FeedbackStatisticsContent from "./FeedbackStatisticsContent.jsx";
 
 function FeedbackStatistics({ header, feedback, feedbackGiven }) {
   const statistics = [
-    <Header header={header} />
+    <Header key="header" header={header} />
   ];
 
   if (feedbackGiven) {
-    statistics.push(<FeedbackStatisticsContent feedback={feedback} />);
-
+    statistics.push(
+      <FeedbackStatisticsContent
+        key="feedback-content"
+        feedback={feedback}
+      />
+    );
   }
   else {
-    statistics.push(<div>No feedback was given yet!</div>)
+    statistics.push(
+      <div key="no-feedback-given">No feedback was given yet!</div>
+    )
   }
 
   return (

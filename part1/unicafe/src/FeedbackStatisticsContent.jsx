@@ -1,5 +1,5 @@
 import Feedback from "./Feedback.jsx";
-import StatisticLine from "./StatisticLine.jsx";
+import StatisticRow from "./StatisticLine.jsx";
 
 const score = {
   positive: 1,
@@ -8,7 +8,7 @@ const score = {
 };
 
 function FeedbackStatisticsContent({ feedback }) {
-  const listItems = [];
+  const rows = [];
   const totalFeedbackSent = Object.values(feedback)
     .reduce((total, current) => total + current, 0);
   const averageFeedbackScore = calculateAverageFeedbackScore(feedback) || 0;
@@ -16,26 +16,44 @@ function FeedbackStatisticsContent({ feedback }) {
 
 
   // Each feedback
-  listItems.push(
+  rows.push(
     <>
       {[...Object.entries(feedback)]
-        .map(([feedbackType, count]) => <StatisticLine text={feedbackType} value={count} />)}
+        .map(([feedbackType, count]) => (
+          <StatisticRow
+            key={feedbackType}
+            header={feedbackType}
+            value={count}
+          />
+        ))}
     </>
   );
 
   // Total feedback
-  listItems.push(
-    <StatisticLine text="total" value={totalFeedbackSent} />
+  rows.push(
+    <StatisticRow
+      key="total"
+      header="total"
+      value={totalFeedbackSent}
+    />
   );
 
   // Average score
-  listItems.push(
-    <StatisticLine text="average" value={averageFeedbackScore} />
+  rows.push(
+    <StatisticRow
+      key="average"
+      header="average"
+      value={averageFeedbackScore}
+    />
   );
 
   // Positive score percentage
-  listItems.push(
-    <StatisticLine text="positive percentage" value={positiveFeedbackPercentage + "%"} />
+  rows.push(
+    <StatisticRow
+      key="positive-percentage"
+      header="positive percentage"
+      value={positiveFeedbackPercentage + "%"}
+    />
   );
 
   function calculateAverageFeedbackScore(feedback) {
@@ -63,9 +81,11 @@ function FeedbackStatisticsContent({ feedback }) {
 
   return (
     <div id="feedback-statistics-content">
-      <ul>
-        {listItems}
-      </ul>
+      <table>
+        <tbody>
+          {rows}
+        </tbody>
+      </table>
     </div>
   )
 }

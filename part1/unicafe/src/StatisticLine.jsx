@@ -1,6 +1,9 @@
-function StatisticLine({ text, value }) {
+function StatisticLine({ header, value }) {
   return (
-    <li>{text}: {value}</li>
+    <tr>
+      <th style={{ textAlign: "left" }}>{header}</th>
+      <td style={{ textAlign: "center" }}>{value}</td>
+    </tr>
   )
 }
 
