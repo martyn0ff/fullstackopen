@@ -1,4 +1,7 @@
 import { useState } from "react";
+import Anecdote from "./Anecdote.jsx";
+import AnecdoteControl from "./AnecdoteControl.jsx";
+import BestAnecdote from "./BestAnecdote.jsx";
 
 function App() {
   const anecdotes = [
@@ -13,32 +16,28 @@ function App() {
   ];
 
   const [selected, setSelected] = useState(0);
-
-  function setRandomSelected(anecdotes) {
-    const randomIdx = Math.floor(Math.random() * anecdotes.length);
-    setSelected(randomIdx);
-  }
+  const [votes, setVotes] = useState({});
 
   return (
     <>
-      <div
-        id="current-anecdote"
-        style={{
-          height: 30,
-          maxHeight: 30
-        }}
-      >
-        {anecdotes[selected]}
-      </div>
+      <Anecdote
+        anecdotes={anecdotes}
+        votes={votes}
+        selected={selected}
+      />
       <br />
-      <div id="anecdotes-control">
-        <button
-          onClick={() => setRandomSelected(anecdotes)}
-          id="random-anecdote-button"
-        >
-          Next anecdote
-        </button>
-      </div>
+      <AnecdoteControl
+        anecdotes={anecdotes}
+        selected={selected}
+        setSelected={setSelected}
+        votes={votes}
+        setVotes={setVotes}
+      />
+      <br />
+      <BestAnecdote
+        anecdotes={anecdotes}
+        votes={votes}
+      />
     </>
   );
 }
