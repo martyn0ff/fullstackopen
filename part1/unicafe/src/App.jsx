@@ -6,10 +6,11 @@ function App() {
   const feedbackHeader = "Unicafe Feedback";
   const statisticsHeader = "Statistics";
   const [feedback, setFeedback] = useState({
-    positive: 0,
-    neutral: 0,
-    negative: 0
+    [Feedback.POSITIVE]: 0,
+    [Feedback.NEUTRAL]: 0,
+    [Feedback.NEGATIVE]: 0
   });
+  const [feedbackGiven, setFeedbackGiven] = useState(false);
 
   return (
     <>
@@ -17,10 +18,12 @@ function App() {
         header={feedbackHeader}
         feedback={feedback}
         setFeedback={setFeedback}
+        setFeedbackGiven={setFeedbackGiven}
       />
       <FeedbackStatistics
         header={statisticsHeader}
         feedback={feedback}
+        feedbackGiven={feedbackGiven}
       />
     </>
   );

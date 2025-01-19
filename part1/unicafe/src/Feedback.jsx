@@ -1,13 +1,19 @@
 import FeedbackControl from "./FeedbackControl.jsx";
 import Header from "./Header.jsx";
 
-function Feedback({ header, feedback, setFeedback }) {
+Feedback.POSITIVE = "positive";
+Feedback.NEUTRAL = "neutral";
+Feedback.NEGATIVE = "negative";
+
+function Feedback({ header, feedback, setFeedback, setFeedbackGiven }) {
+
   return (
     <div id="feedback">
       <Header header={header} />
       <FeedbackControl
         feedback={feedback}
         setFeedback={setFeedback}
+        setFeedbackGiven={setFeedbackGiven}
       />
     </div>
   );

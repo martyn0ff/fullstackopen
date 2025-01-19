@@ -1,18 +1,17 @@
 import FeedbackButton from "./FeedbackButton.jsx";
 
-function FeedbackControl({ feedback, setFeedback }) {
+function FeedbackControl({ feedback, setFeedback, setFeedbackGiven }) {
   const positive = "positive";
   const neutral = "neutral";
   const negative = "negative";
-
 
   function updateFeedback(feedbackType) {
     const newFeedback = {
       ...feedback,
       [feedbackType]: feedback[feedbackType] + 1
     };
-    console.log(newFeedback);
     setFeedback(newFeedback);
+    setFeedbackGiven(true);
   }
 
   return (
@@ -33,7 +32,7 @@ function FeedbackControl({ feedback, setFeedback }) {
       />
       <FeedbackButton
         onClick={() => updateFeedback(negative)}
-        bg="lightred"
+        bg="pink"
         feedbackType={negative}
         feedbackText="Bad"
         feedback={feedback}
