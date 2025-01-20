@@ -8,6 +8,7 @@ class PhonebookEntryObject {
 
   id = PhonebookEntryObject.ID_GENERATOR();
   name;
+  phoneNumber;
 
   get id() {
     return this.id;
@@ -17,8 +18,13 @@ class PhonebookEntryObject {
     return this.name;
   }
 
-  constructor(name) {
+  get phoneNumber() {
+    return this.phoneNumber;
+  }
+
+  constructor(name, phoneNumber) {
     this.name = name;
+    this.phoneNumber = phoneNumber;
   }
 
   equals(other) {

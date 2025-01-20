@@ -1,5 +1,5 @@
 function PhonebookEntryComponent({ entry }) {
-  return <li>{entry.name}</li>;
+  return <li>{entry.name}: {entry.phoneNumber}</li>;
 }
 
 export default PhonebookEntryComponent;

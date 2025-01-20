@@ -5,9 +5,10 @@ import PhonebookEntryObject from "./classes/PhonebookEntryObject.js";
 
 function App() {
   const [phonebook, setPhonebook] = useState([
-    new PhonebookEntryObject("Arto Hellas")
+    new PhonebookEntryObject("Arto Hellas", "623-349-231")
   ]);
   const [newName, setNewName] = useState("");
+  const [newPhoneNumber, setNewPhoneNumber] = useState("");
 
   return (
     <div>
@@ -16,6 +17,8 @@ function App() {
         setPhonebook={setPhonebook}
         newName={newName}
         setNewName={setNewName}
+        newPhoneNumber={newPhoneNumber}
+        setNewPhoneNumber={setNewPhoneNumber}
       />
       <PhonebookComponent phonebook={phonebook} />
     </div>
