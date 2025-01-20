@@ -5,12 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77c8de0c-4241-40d1-ab5e-5005f8840d40" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/part2/courseinfo/src/Header2.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part2/phonebook/src/components/Header.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part2/phonebook/src/components/Phonebook.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part2/phonebook/src/components/PhonebookControl.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part2/phonebook/src/components/PhonebookEntry.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part2/courseinfo/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/part2/courseinfo/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part2/courseinfo/src/CourseHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/part2/courseinfo/src/Header1.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part2/courseinfo/src/CourseStatistics.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/part2/courseinfo/src/CourseStatistics.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part2/courseinfo/src/Part.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/part2/courseinfo/src/Part.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part2/.eslintrc.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/part2/notes/.eslintrc.cjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part2/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/part2/notes/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part2/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/part2/notes/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/part2/notes/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part2/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/part2/notes/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part2/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/part2/notes/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part2/public/vite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/part2/notes/public/vite.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part2/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/part2/notes/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part2/src/components/Note.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/part2/notes/src/components/Note.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part2/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/part2/notes/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part2/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/part2/notes/src/main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part2/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/part2/notes/vite.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +38,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/part2" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -43,7 +55,7 @@
     "JavaScript Debug.localhost:5174.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "devel",
+    "git-widget-placeholder": "part2-1",
     "js.last.introduce.type": "CONST",
     "last_opened_file_path": "/home/roman/WebstormProjects/fullstackopen/part2/courseinfo/src",
     "node.js.detected.package.eslint": "true",
@@ -62,6 +74,9 @@
       <recent name="$PROJECT_DIR$/part2" />
       <recent name="$PROJECT_DIR$/part1/unicafe/src" />
       <recent name="$PROJECT_DIR$/part1/courseinfo/src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/part2/notes" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.localhost:5174">
@@ -94,7 +109,7 @@
       <option name="presentableId" value="Default" />
       <updated>1737154655131</updated>
       <workItem from="1737154656848" duration="17301000" />
-      <workItem from="1737235188110" duration="29586000" />
+      <workItem from="1737235188110" duration="39547000" />
     </task>
     <servers />
   </component>
