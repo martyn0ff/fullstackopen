@@ -1,23 +1,23 @@
 import { useState } from "react";
-import Phonebook from "./components/Phonebook.jsx";
-import PhonebookControl from "./components/PhonebookControl.jsx";
-import PhonebookEntry from "./components/PhonebookEntry.jsx";
+import PhonebookComponent from "./components/PhonebookComponent.jsx";
+import PhonebookControlComponent from "./components/PhonebookControlComponent.jsx";
+import PhonebookEntryObject from "./classes/PhonebookEntryObject.js";
 
 function App() {
   const [phonebook, setPhonebook] = useState([
-    PhonebookEntry.newEntry("Arto Hellas")
+    new PhonebookEntryObject("Arto Hellas")
   ]);
   const [newName, setNewName] = useState("");
 
   return (
     <div>
-      <PhonebookControl
+      <PhonebookControlComponent
         phonebook={phonebook}
         setPhonebook={setPhonebook}
         newName={newName}
         setNewName={setNewName}
       />
-      <Phonebook phonebook={phonebook} />
+      <PhonebookComponent phonebook={phonebook} />
     </div>
   );
 }

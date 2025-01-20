@@ -1,13 +1,19 @@
-import Header from "./Header.jsx";
-import PhonebookEntry from "./PhonebookEntry.jsx";
+import HeaderComponent from "./HeaderComponent.jsx";
+import PhonebookEntryComponent from "./PhonebookEntryComponent.jsx";
+import PhonebookEntryObject from "../classes/PhonebookEntryObject.js";
 
-function PhonebookControl({ phonebook, setPhonebook, newName, setNewName }) {
+function PhonebookControlComponent({ phonebook, setPhonebook, newName, setNewName }) {
   function handleSubmit(event) {
     event.preventDefault();
     const form = event.target;
-    const entry = PhonebookEntry.newEntry(form.newName.value);
-    setPhonebook(phonebook.concat(entry));
-    setNewName("");
+    const entry = new PhonebookEntryObject(form.newName.value);
+    if (phonebook.some(e => e.equals(entry))) {
+      alert(`This entry already exists in phonebook.`)
+    }
+    else {
+      setPhonebook(phonebook.concat(entry));
+      setNewName("");
+    }
   }
 
   function handleOnNameChange(event) {
@@ -17,7 +23,7 @@ function PhonebookControl({ phonebook, setPhonebook, newName, setNewName }) {
 
   return (
     <div id="phonebook-control">
-      <Header value="Phonebook" />
+      <HeaderComponent value="Phonebook" />
       <form
         onSubmit={handleSubmit}
       >
@@ -48,4 +54,4 @@ function PhonebookControl({ phonebook, setPhonebook, newName, setNewName }) {
   );
 }
 
-export default PhonebookControl;
+export default PhonebookControlComponent;
