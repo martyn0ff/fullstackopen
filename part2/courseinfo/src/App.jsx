@@ -1,5 +1,6 @@
 import Header from "./CourseHeader.jsx";
 import Course from "./Course.jsx";
+import CourseStatistics from "./CourseStatistics.jsx";
 
 function App() {
   const course = {
@@ -27,7 +28,7 @@ function App() {
     <div>
       <Header header={course.name} />
       <Course course={course} />
-      {/*<CourseStatistics course={course} />*/}
+      <CourseStatistics course={course} />
     </div>
   );
 
