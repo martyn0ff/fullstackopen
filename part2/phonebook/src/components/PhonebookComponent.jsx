@@ -1,12 +1,12 @@
 import HeaderComponent from "./HeaderComponent.jsx";
 import PhonebookEntryComponent from "./PhonebookEntryComponent.jsx";
 
-function PhonebookComponent({ phonebook }) {
+function PhonebookComponent({ displayedPhonebook }) {
   return (
     <div id='phonebook'>
       <HeaderComponent value="Numbers" />
       <ul>
-        {phonebook.map(entry =>
+        {displayedPhonebook.map(entry =>
           <PhonebookEntryComponent key={entry.id} entry={entry} />
         )}
       </ul>

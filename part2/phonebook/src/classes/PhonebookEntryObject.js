@@ -1,12 +1,14 @@
 import PhonebookEntryComponent from "../components/PhonebookEntryComponent.jsx";
 
 class PhonebookEntryObject {
-  static ID_GENERATOR = () => {
-    let id = 1;
-    return id++;
+  static ID_GENERATOR = {
+    currentId: 1,
+    next() {
+      return this.currentId++;
+    }
   };
 
-  id = PhonebookEntryObject.ID_GENERATOR();
+  id = PhonebookEntryObject.ID_GENERATOR.next();
   name;
   phoneNumber;
 
