@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77c8de0c-4241-40d1-ab5e-5005f8840d40" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/part2/courseinfo/src/CourseStatisticsItem.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part2/courseinfo/src/Header2.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part2/courseinfo/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/part2/courseinfo/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part2/courseinfo/src/CourseHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/part2/courseinfo/src/Header1.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part2/courseinfo/src/CourseStatistics.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/part2/courseinfo/src/CourseStatistics.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part2/courseinfo/src/Part.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/part2/courseinfo/src/Part.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +45,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "devel",
     "js.last.introduce.type": "CONST",
-    "last_opened_file_path": "/home/roman/WebstormProjects/fullstackopen/part2",
+    "last_opened_file_path": "/home/roman/WebstormProjects/fullstackopen/part2/courseinfo/src",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -56,6 +58,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/part2/courseinfo/src" />
       <recent name="$PROJECT_DIR$/part2" />
       <recent name="$PROJECT_DIR$/part1/unicafe/src" />
       <recent name="$PROJECT_DIR$/part1/courseinfo/src" />
@@ -91,7 +94,7 @@
       <option name="presentableId" value="Default" />
       <updated>1737154655131</updated>
       <workItem from="1737154656848" duration="17301000" />
-      <workItem from="1737235188110" duration="27993000" />
+      <workItem from="1737235188110" duration="29586000" />
     </task>
     <servers />
   </component>

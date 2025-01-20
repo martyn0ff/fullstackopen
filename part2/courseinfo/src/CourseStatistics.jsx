@@ -1,10 +1,10 @@
-import Header from "./CourseHeader.jsx";
 import CourseStatisticsItem from "./CourseStatisticsItem.jsx";
+import Header2 from "./Header2.jsx";
 
 function CourseStatistics({ course }) {
   return (
     <div>
-      <Header header="Statistics" />
+      <Header2 header="Statistics" />
       <ul>
         <CourseStatisticsItem
           course={course}
@@ -19,7 +19,7 @@ function CourseStatistics({ course }) {
 
 function calculateTotalExercisesCount(courses) {
   return courses.parts
-    .map(part => part.exercisesCount)
+    .map(part => part.exercises)
     .reduce((totalCount, currentCount) => totalCount + currentCount, 0);
 }
 
