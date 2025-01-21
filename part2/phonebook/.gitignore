@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# We would use this in prod, but for educational purposes it's OK
+#**/.env*

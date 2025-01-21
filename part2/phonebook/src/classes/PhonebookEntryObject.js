@@ -1,5 +1,3 @@
-import PhonebookEntryComponent from "../components/PhonebookEntryComponent.jsx";
-
 class PhonebookEntryObject {
   static ID_GENERATOR = {
     currentId: 1,
@@ -8,7 +6,12 @@ class PhonebookEntryObject {
     }
   };
 
-  id = PhonebookEntryObject.ID_GENERATOR.next();
+  static fromJson({ name, phoneNumber, id }) {
+    PhonebookEntryObject.ID_GENERATOR.next();
+    return new PhonebookEntryObject(name, phoneNumber, +id);
+  }
+
+  id;
   name;
   phoneNumber;
 
@@ -24,9 +27,15 @@ class PhonebookEntryObject {
     return this.phoneNumber;
   }
 
-  constructor(name, phoneNumber) {
+  constructor(name, phoneNumber, id) {
     this.name = name;
     this.phoneNumber = phoneNumber;
+    if (id !== 0 && !id) {
+      this.id = PhonebookEntryObject.ID_GENERATOR.next();
+    }
+    else {
+      this.id = id;
+    }
   }
 
   equals(other) {

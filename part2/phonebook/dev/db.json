@@ -1,0 +1,54 @@
+{
+  "persons": [
+    {
+      "id": 1,
+      "name": "Arto Hellas",
+      "phoneNumber": "040-1234567"
+    },
+    {
+      "id": 2,
+      "name": "Jari Nieminen",
+      "phoneNumber": "046-1239876"
+    },
+    {
+      "id": 3,
+      "name": "Mikko Virtanen",
+      "phoneNumber": "050-4445678"
+    },
+    {
+      "id": 4,
+      "name": "Sanna Salminen",
+      "phoneNumber": "045-5553344"
+    },
+    {
+      "id": 5,
+      "name": "Liisa Korhonen",
+      "phoneNumber": "044-3336789"
+    },
+    {
+      "id": 6,
+      "name": "Liisa Mäkelä",
+      "phoneNumber": "044-1112233"
+    },
+    {
+      "id": 7,
+      "name": "Mikko Järvinen",
+      "phoneNumber": "050-5551234"
+    },
+    {
+      "id": 8,
+      "name": "Pekka Virtanen",
+      "phoneNumber": "040-7777888"
+    },
+    {
+      "id": 9,
+      "name": "Arto Vähänikkilä",
+      "phoneNumber": "040-9876543"
+    },
+    {
+      "id": 10,
+      "name": "Sari Salminen",
+      "phoneNumber": "045-4441122"
+    }
+  ]
+}

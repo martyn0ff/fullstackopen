@@ -1,5 +1,3 @@
-import { useRef } from "react";
-
 Note.newNote = function(id, content, important) {
   return {
     id: id,

@@ -5,14 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77c8de0c-4241-40d1-ab5e-5005f8840d40" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/part2/notes/dev/db.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part2/phonebook/.env.dev" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part2/phonebook/dev/db.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/part2/phonebook/src/classes/PhonebookEntryObject.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part2/phonebook/src/classes/PhonebookUtil.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/part2/phonebook/src/components/AddNewPhonebookEntryFormComponent.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/part2/phonebook/src/components/FilterPhonebookComponent.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/part2/phonebook/src/components/HeaderComponent.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/part2/phonebook/src/components/PhonebookComponent.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/part2/phonebook/src/components/PhonebookControlComponent.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/part2/phonebook/src/components/PhonebookEntryComponent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part2/.eslintrc.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/part2/notes/.eslintrc.cjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part2/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/part2/notes/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part2/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/part2/notes/README.md" afterDir="false" />
@@ -34,8 +37,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="JSX File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -112,7 +115,8 @@
       <updated>1737154655131</updated>
       <workItem from="1737154656848" duration="17301000" />
       <workItem from="1737235188110" duration="43860000" />
-      <workItem from="1737355956989" duration="15779000" />
+      <workItem from="1737355956989" duration="21556000" />
+      <workItem from="1737437218748" duration="6356000" />
     </task>
     <servers />
   </component>

@@ -1,6 +1,7 @@
 import PhonebookEntryObject from "../classes/PhonebookEntryObject.js";
+import PhonebookUtil from "../classes/PhonebookUtil.js";
 
-function AddNewPhonebookEntryFormComponent({ phonebook, setPhonebook, setDisplayedPhonebook, newName, setNewName, newPhoneNumber, setNewPhoneNumber }) {
+function AddNewPhonebookEntryFormComponent({ phonebook, setPhonebook, displayedPhonebook, setDisplayedPhonebook, newName, setNewName, newPhoneNumber, setNewPhoneNumber }) {
   function handleSubmit(event) {
     event.preventDefault();
     const form = event.target;
@@ -14,7 +15,10 @@ function AddNewPhonebookEntryFormComponent({ phonebook, setPhonebook, setDisplay
     else {
       const newPhonebook = phonebook.concat(entry);
       setPhonebook(newPhonebook);
-      setDisplayedPhonebook(newPhonebook);
+      setDisplayedPhonebook({
+        ...displayedPhonebook,
+        items: PhonebookUtil.phonebookToDisplayedItems(newPhonebook)
+      });
       setNewName("");
       setNewPhoneNumber("");
     }

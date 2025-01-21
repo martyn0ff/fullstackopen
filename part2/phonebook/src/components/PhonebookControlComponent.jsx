@@ -10,6 +10,7 @@ function PhonebookControlComponent({ phonebook, setPhonebook, displayedPhonebook
       <AddNewPhonebookEntryFormComponent
         phonebook={phonebook}
         setPhonebook={setPhonebook}
+        displayedPhonebook={displayedPhonebook}
         setDisplayedPhonebook={setDisplayedPhonebook}
         newName={newName}
         setNewName={setNewName}
