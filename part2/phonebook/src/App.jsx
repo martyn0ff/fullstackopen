@@ -16,15 +16,17 @@ function App() {
     new PhonebookEntryObject("Arto Vähänikkilä", "040-9876543"),
     new PhonebookEntryObject("Sari Salminen", "045-4441122")
   ]);
-  const [displayedPhonebook, setDisplayedPhonebook] = useState(phonebook);
+  const [displayedPhonebook, setDisplayedPhonebook] = useState(phonebookToDisplayed(phonebook));
   const [newName, setNewName] = useState("");
   const [newPhoneNumber, setNewPhoneNumber] = useState("");
+
 
   return (
     <div>
       <PhonebookControlComponent
         phonebook={phonebook}
         setPhonebook={setPhonebook}
+        displayedPhonebook={displayedPhonebook}
         setDisplayedPhonebook={setDisplayedPhonebook}
         newName={newName}
         setNewName={setNewName}
@@ -36,6 +38,20 @@ function App() {
       />
     </div>
   );
+}
+
+function phonebookToDisplayed(phonebook) {
+  return {
+    properties: {
+      isFiltered: false
+    },
+    items: phonebook.map(entry => ({
+      value: entry,
+      properties: {
+        highlightedRanges: []
+      }
+    }))
+  };
 }
 
 export default App;

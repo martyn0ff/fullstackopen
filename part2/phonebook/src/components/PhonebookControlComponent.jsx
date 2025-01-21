@@ -2,7 +2,7 @@ import HeaderComponent from "./HeaderComponent.jsx";
 import AddNewPhonebookEntryFormComponent from "./AddNewPhonebookEntryFormComponent.jsx";
 import FilterPhonebookComponent from "./FilterPhonebookComponent.jsx";
 
-function PhonebookControlComponent({ phonebook, setPhonebook, setDisplayedPhonebook, newName, setNewName, newPhoneNumber, setNewPhoneNumber }) {
+function PhonebookControlComponent({ phonebook, setPhonebook, displayedPhonebook, setDisplayedPhonebook, newName, setNewName, newPhoneNumber, setNewPhoneNumber }) {
 
   return (
     <div id="phonebook-control">
@@ -18,7 +18,7 @@ function PhonebookControlComponent({ phonebook, setPhonebook, setDisplayedPhoneb
       />
       <br />
       <FilterPhonebookComponent
-        phonebook={phonebook}
+        displayedPhonebook={displayedPhonebook}
         setDisplayedPhonebook={setDisplayedPhonebook}
       />
     </div>

@@ -1,25 +1,21 @@
 import { useState } from "react";
 
-function FilterPhonebookComponent({ phonebook, setDisplayedPhonebook }) {
+function FilterPhonebookComponent({ displayedPhonebook, setDisplayedPhonebook }) {
 
   const [newFilterValue, setNewFilterValue] = useState("");
 
-  function normalize(str) {
-    return str
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .toLowerCase();
-  }
-
   function handleOnFilterInput(event) {
     const filterValue = event.target.value;
+
     if (filterValue === "") {
-      setDisplayedPhonebook(phonebook);
+      const clearedDisplayedPhonebook = clearHighlightedRanges(displayedPhonebook);
+      clearedDisplayedPhonebook.properties.isFiltered = false;
+      setDisplayedPhonebook(clearedDisplayedPhonebook);
     }
     else {
-      const filteredPhonebook = phonebook.filter(entry =>
-        normalize(entry.name).toLowerCase().includes(normalize(filterValue).toLowerCase()));
-      setDisplayedPhonebook(filteredPhonebook);
+      const highlightedDisplayedPhonebook = updateHighlightedRanges(displayedPhonebook, filterValue);
+      highlightedDisplayedPhonebook.properties.isFiltered = true;
+      setDisplayedPhonebook(highlightedDisplayedPhonebook);
     }
     setNewFilterValue(filterValue);
   }
@@ -44,6 +40,53 @@ function FilterPhonebookComponent({ phonebook, setDisplayedPhonebook }) {
       />
     </div>
   );
+}
+
+function clearHighlightedRanges(displayedPhonebook) {
+  return {
+    ...displayedPhonebook,
+    items: displayedPhonebook.items.map(entry => ({
+      ...entry,
+      properties: {
+        highlightedRanges: []
+      }
+    }))
+  };
+}
+
+function updateHighlightedRanges(displayedPhonebook, filterValue) {
+  return {
+    ...displayedPhonebook,
+    items: displayedPhonebook.items.map(entry => ({
+      ...entry,
+      properties: {
+        highlightedRanges: allIndexOf(normalize(entry.value.name), normalize(filterValue))
+      }
+    }))
+  };
+
+}
+
+function normalize(str) {
+  return str
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase();
+}
+
+function allIndexOf(str, substr) {
+  const indices = [];
+  let position = 0;
+  let currentIndex = null;
+  while ((currentIndex = str.indexOf(substr, position)) !== -1) {
+    indices.push(currentIndex);
+    position = currentIndex + 1;
+  }
+
+  return indices.map(idx => ({
+    start: idx,
+    end: idx + substr.length - 1,
+  }));
 }
 
 export default FilterPhonebookComponent;
