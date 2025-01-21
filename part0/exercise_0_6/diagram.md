@@ -19,8 +19,8 @@ sequenceDiagram
     server-->>browser: the JavaScript file
     deactivate server
 
-    Note right of browser: The browser overrides default onsubmit event handler for the note<br/>form with custom POST request that stores the new note in<br/>persistent storage
-    Note right of browser: On page load, the browser loads all stored notes and stores them<br/>in-memory
+    NoteComponent right of browser: The browser overrides default onsubmit event handler for the note<br/>form with custom POST request that stores the new note in<br/>persistent storage
+    NoteComponent right of browser: On page load, the browser loads all stored notes and stores them<br/>in-memory
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate server
@@ -31,7 +31,7 @@ sequenceDiagram
     user->>browser: Click "Save" button
 
     activate browser
-    Note right of browser: Browser stores the note in-memory, clears the input field, redraws<br/>all notes and sends the note to the server for persistent storage
+    NoteComponent right of browser: Browser stores the note in-memory, clears the input field, redraws<br/>all notes and sends the note to the server for persistent storage
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
     deactivate browser
 

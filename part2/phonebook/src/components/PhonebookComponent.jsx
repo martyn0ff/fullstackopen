@@ -1,7 +1,7 @@
 import HeaderComponent from "./HeaderComponent.jsx";
 import PhonebookEntryComponent from "./PhonebookEntryComponent.jsx";
 
-function PhonebookComponent({ displayedPhonebook }) {
+function PhonebookComponent({ phonebook, updatePhonebook, displayedPhonebook, phonebookClient }) {
 
   let displayedPhonebook1;
   if (displayedPhonebook.properties.isFiltered) {
@@ -18,8 +18,15 @@ function PhonebookComponent({ displayedPhonebook }) {
     <div id='phonebook'>
       <HeaderComponent value="Numbers" />
       <ul>
-        {displayedPhonebook1.items.map(entry =>
-          <PhonebookEntryComponent key={entry.value.id} entry={entry} />
+        {displayedPhonebook1.items.map(entry => {
+            return <PhonebookEntryComponent
+              key={entry.value.id}
+              entryObject={entry}
+              updatePhonebook={updatePhonebook}
+              phonebook={phonebook}
+              phonebookClient={phonebookClient}
+            />;
+          }
         )}
       </ul>
     </div>

@@ -1,7 +1,7 @@
-import PhonebookEntryObject from "../classes/PhonebookEntryObject.js";
-import PhonebookUtil from "../classes/PhonebookUtil.js";
+import PhonebookEntryObject from "../domain/PhonebookEntryObject.js";
+import PhonebookUtil from "../domain/PhonebookUtil.js";
 
-function AddNewPhonebookEntryFormComponent({ phonebook, setPhonebook, displayedPhonebook, setDisplayedPhonebook, newName, setNewName, newPhoneNumber, setNewPhoneNumber }) {
+function AddNewPhonebookEntryFormComponent({ phonebook, updatePhonebook, newName, setNewName, newPhoneNumber, setNewPhoneNumber, phonebookClient }) {
   function handleSubmit(event) {
     event.preventDefault();
     const form = event.target;
@@ -9,18 +9,29 @@ function AddNewPhonebookEntryFormComponent({ phonebook, setPhonebook, displayedP
       form.newName.value,
       form.newPhoneNumber.value,
     );
-    if (phonebook.some(e => e.equals(entry))) {
-      alert(`This entry already exists in phonebook.`);
+
+    const alreadyExistingIdx = phonebook.findIndex(e => e.name === entry.name);
+    if (alreadyExistingIdx !== -1) {
+      const alreadyExistingEntry = phonebook[alreadyExistingIdx];
+      const isNewPhoneNumberConfirmed = confirm(`This name already exists in phonebook. Do you want to update the phone number?`);
+      if (isNewPhoneNumberConfirmed) {
+        phonebookClient
+          .update(alreadyExistingEntry.id, new PhonebookEntryObject(entry.name, entry.phoneNumber))
+          .then(updatedEntry => {
+            const newPhonebook = phonebook.map(e => e.id === updatedEntry.id ? updatedEntry : e);
+            updatePhonebook(newPhonebook);
+          })
+      }
     }
     else {
-      const newPhonebook = phonebook.concat(entry);
-      setPhonebook(newPhonebook);
-      setDisplayedPhonebook({
-        ...displayedPhonebook,
-        items: PhonebookUtil.phonebookToDisplayedItems(newPhonebook)
-      });
-      setNewName("");
-      setNewPhoneNumber("");
+      phonebookClient
+        .save(entry)
+        .then(entry => {
+          const newPhonebook = phonebook.concat(entry);
+          updatePhonebook(newPhonebook);
+          setNewName("");
+          setNewPhoneNumber("");
+        })
     }
   }
 

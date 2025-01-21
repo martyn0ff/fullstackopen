@@ -1,14 +1,6 @@
 class PhonebookEntryObject {
-  static ID_GENERATOR = {
-    currentId: 1,
-    next() {
-      return this.currentId++;
-    }
-  };
-
   static fromJson({ name, phoneNumber, id }) {
-    PhonebookEntryObject.ID_GENERATOR.next();
-    return new PhonebookEntryObject(name, phoneNumber, +id);
+    return new PhonebookEntryObject(name, phoneNumber, id);
   }
 
   id;
@@ -30,12 +22,8 @@ class PhonebookEntryObject {
   constructor(name, phoneNumber, id) {
     this.name = name;
     this.phoneNumber = phoneNumber;
-    if (id !== 0 && !id) {
-      this.id = PhonebookEntryObject.ID_GENERATOR.next();
-    }
-    else {
-      this.id = id;
-    }
+    if (id) this.id = id;
+    else this.id = undefined;
   }
 
   equals(other) {
