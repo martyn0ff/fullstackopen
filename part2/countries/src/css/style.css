@@ -1,0 +1,36 @@
+#countryInfo {
+  margin-left: 10px;
+  width: 100%;
+}
+
+#countryFlag {
+  border: 1px solid black;
+}
+
+#countryControl {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #eee;
+}
+
+#countryFilterInput {
+  display: block;
+}
+
+#countriesContentContainer {
+  display: flex;
+}
+
+#weatherTable {
+  text-align: left;
+
+  td, th {
+    padding: 5px;
+  }
+
+  th {
+    background: lightslategrey;
+    color: white;
+  }
+}
