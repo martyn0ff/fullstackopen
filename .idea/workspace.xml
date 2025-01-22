@@ -18,15 +18,16 @@
       <change afterPath="$PROJECT_DIR$/part2/phonebook/src/components/AddNewPhonebookEntryFormComponent.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/part2/phonebook/src/components/FilterPhonebookComponent.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/part2/phonebook/src/components/HeaderComponent.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part2/phonebook/src/components/NotificationsComponent.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/part2/phonebook/src/components/PhonebookComponent.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/part2/phonebook/src/components/PhonebookControlComponent.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/part2/phonebook/src/components/PhonebookEntryComponent.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part2/phonebook/src/domain/PhonebookEntryObject.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part2/phonebook/src/domain/PhonebookUtil.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part2/phonebook/src/config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part2/phonebook/src/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part2/phonebook/src/objects/NotificationObject.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part2/phonebook/src/objects/PhonebookEntryObject.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part2/phonebook/src/util/PhonebookUtil.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part0/exercise_0_4/diagram.md" beforeDir="false" afterPath="$PROJECT_DIR$/part0/exercise_0_4/diagram.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part0/exercise_0_5/diagram.md" beforeDir="false" afterPath="$PROJECT_DIR$/part0/exercise_0_5/diagram.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part0/exercise_0_6/diagram.md" beforeDir="false" afterPath="$PROJECT_DIR$/part0/exercise_0_6/diagram.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part2/.eslintrc.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/part2/notes/.eslintrc.cjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part2/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/part2/notes/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part2/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/part2/notes/README.md" afterDir="false" />
@@ -65,25 +66,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.localhost:5174.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;part2-1&quot;,
-    &quot;js.last.introduce.type&quot;: &quot;CONST&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/roman/WebstormProjects/fullstackopen/part2/courseinfo/src&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.HTML&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/opt/webstorm/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JavaScript Debug.index.html.executor": "Debug",
+    "JavaScript Debug.localhost:5174.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "part2-1",
+    "js.last.introduce.type": "CONST",
+    "last_opened_file_path": "/home/roman/WebstormProjects/fullstackopen/part2/courseinfo/src",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "/opt/webstorm/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/part2/courseinfo/src" />
@@ -92,6 +93,7 @@
       <recent name="$PROJECT_DIR$/part1/courseinfo/src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/part2/phonebook/src/util" />
       <recent name="$PROJECT_DIR$/part2/notes" />
     </key>
   </component>
@@ -132,7 +134,7 @@
       <workItem from="1737154656848" duration="17301000" />
       <workItem from="1737235188110" duration="43860000" />
       <workItem from="1737355956989" duration="21556000" />
-      <workItem from="1737437218748" duration="21711000" />
+      <workItem from="1737437218748" duration="38753000" />
     </task>
     <servers />
   </component>

@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import PhonebookComponent from "./components/PhonebookComponent.jsx";
 import PhonebookControlComponent from "./components/PhonebookControlComponent.jsx";
 import axios from "axios";
-import PhonebookEntryObject from "./domain/PhonebookEntryObject.js";
-import PhonebookUtil from "./domain/PhonebookUtil.js";
+import PhonebookEntryObject from "./objects/PhonebookEntryObject.js";
+import PhonebookUtil from "./util/PhonebookUtil.js";
 import PhonebookClient from "./client/PhonebookClient.js";
+import NotificationsComponent from "./components/NotificationsComponent.jsx";
 
 const phonebookClient = new PhonebookClient();
 
@@ -18,6 +19,7 @@ function App() {
   });
   const [newName, setNewName] = useState("");
   const [newPhoneNumber, setNewPhoneNumber] = useState("");
+  const [notifications, setNotifications] = useState(new Map());
 
   function updatePhonebook(newPhonebook) {
     setPhonebook(newPhonebook);
@@ -33,10 +35,14 @@ function App() {
       })
   }
 
-  useEffect(fetchPersons, [])
+  useEffect(fetchPersons, []);
 
   return (
     <div>
+      <NotificationsComponent
+        notifications={notifications}
+        setNotifications={setNotifications}
+      />
       <PhonebookControlComponent
         phonebook={phonebook}
         setPhonebook={setPhonebook}
@@ -45,6 +51,8 @@ function App() {
         setDisplayedPhonebook={setDisplayedPhonebook}
         newName={newName}
         setNewName={setNewName}
+        notifications={notifications}
+        setNotifications={setNotifications}
         newPhoneNumber={newPhoneNumber}
         setNewPhoneNumber={setNewPhoneNumber}
         phonebookClient={phonebookClient}

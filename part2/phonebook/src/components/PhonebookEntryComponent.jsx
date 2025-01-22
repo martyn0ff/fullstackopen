@@ -39,7 +39,7 @@ function PhonebookEntryComponent({ entryObject, phonebook, updatePhonebook, phon
     <li
       key={entryObject.value.id}
     >
-      <strong>{buildJsx(entryObject)}</strong>: {entryObject.value.phoneNumber} <span>
+      <span>
       [
       <a
         href="#"
@@ -48,10 +48,9 @@ function PhonebookEntryComponent({ entryObject, phonebook, updatePhonebook, phon
         del
       </a>
       ]
-      </span>
+      </span> <strong>{buildJsx(entryObject)}</strong>: {entryObject.value.phoneNumber}
     </li>);
 }
-
 
 
 export default PhonebookEntryComponent;

@@ -1,7 +1,9 @@
-import PhonebookEntryObject from "../domain/PhonebookEntryObject.js";
-import PhonebookUtil from "../domain/PhonebookUtil.js";
+import PhonebookEntryObject from "../objects/PhonebookEntryObject.js";
+import NotificationObject from "../objects/NotificationObject.js";
+import { config } from "../config.json";
 
-function AddNewPhonebookEntryFormComponent({ phonebook, updatePhonebook, newName, setNewName, newPhoneNumber, setNewPhoneNumber, phonebookClient }) {
+function AddNewPhonebookEntryFormComponent({ phonebook, updatePhonebook, newName, setNewName, notifications, setNotifications, newPhoneNumber, setNewPhoneNumber, phonebookClient }) {
+
   function handleSubmit(event) {
     event.preventDefault();
     const form = event.target;
@@ -20,6 +22,23 @@ function AddNewPhonebookEntryFormComponent({ phonebook, updatePhonebook, newName
           .then(updatedEntry => {
             const newPhonebook = phonebook.map(e => e.id === updatedEntry.id ? updatedEntry : e);
             updatePhonebook(newPhonebook);
+            const phoneUpdatedNotification = NotificationObject.newInfo(`${entry.name}'s phone number has been updated!`);
+            addNotification(phoneUpdatedNotification);
+          })
+          .catch(error => {
+            if (error.status === 404) {
+              const alreadyDeletedNotification = NotificationObject.newWarning(`${entry.name}'s phone number has already been deleted!`);
+              addNotification(alreadyDeletedNotification);
+              phonebookClient
+                .getAll()
+                .then(persons => {
+                  const phonebook = persons.map(person => PhonebookEntryObject.fromJson(person));
+                  updatePhonebook(phonebook);
+                })
+            }
+            else {
+              throw error;
+            }
           })
       }
     }
@@ -31,8 +50,18 @@ function AddNewPhonebookEntryFormComponent({ phonebook, updatePhonebook, newName
           updatePhonebook(newPhonebook);
           setNewName("");
           setNewPhoneNumber("");
+          const personAddedNotification = NotificationObject.newInfo(`Added "${entry.name}" to the phonebook!`);
+          addNotification(personAddedNotification);
         })
     }
+  }
+
+  function addNotification(notification) {
+    console.log("Adding notification %o", notification);
+    const removeAt = Date.now() + config.notification.displayTime;
+    const newNotifications = new Map([...notifications, [removeAt, notification]]);
+    console.log("New notifications value: %o, old: %o, equal: %o", newNotifications, notifications, newNotifications === notifications);
+    setNotifications(newNotifications);
   }
 
   function handleOnNameChange(event) {
